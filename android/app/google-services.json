@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1014677944281",
+    "project_id": "nijuda",
+    "storage_bucket": "nijuda.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1014677944281:android:32a1076b15d7a4de0d4bc8",
+        "android_client_info": {
+          "package_name": "co.nijuda.activosfijos"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBtMSKtoRkfsMgS-7MDYn6I9r1Fiz1-YKI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
