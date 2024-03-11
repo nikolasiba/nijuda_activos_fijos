@@ -37,6 +37,9 @@ dependencies:
   cupertino_icons: ^1.0.2
   firebase_core: ^2.27.0
   firebase_auth: ^4.17.8
+  freezed_annotation: ^2.4.1
+  get: ^4.6.6
+  animate_do: ^3.3.4
 
 dev_dependencies:
   flutter_test:
@@ -61,8 +64,9 @@ flutter:
   uses-material-design: true
 
   # To add assets to your application, add an assets section, like this:
-  # assets:
-  #   - images/a_dot_burr.jpeg
+  assets:
+     - res/images/
+     - res/icons/
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
