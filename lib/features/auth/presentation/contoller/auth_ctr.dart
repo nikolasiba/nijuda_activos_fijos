@@ -2,6 +2,7 @@ import 'package:activosfijos/features/auth/data/datasource/remote/auth_firebase.
 import 'package:activosfijos/features/auth/data/repositories/auth_repository_impl.dart';
 import 'package:activosfijos/features/auth/domain/repositories/auth_repository.dart';
 import 'package:activosfijos/features/bottom_navigation/presentation/pages/bottom_navigation_page.dart';
+import 'package:activosfijos/shared/assets/assets.dart';
 import 'package:activosfijos/shared/widgets/custom_alert.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -25,6 +26,7 @@ class AuthController extends GetxController {
 
     if (response) {
       CustomAlert(
+        image: Res.images.successImage,
         title: 'Bienvenido',
         body: 'Ingreso exitoso',
         onPressed: () => Get.offAll(

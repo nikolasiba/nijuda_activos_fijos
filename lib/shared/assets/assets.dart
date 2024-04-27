@@ -9,8 +9,11 @@ class ResImages {
   ResImages._();
   final principalLogo = 'res/images/logo_principal.png';
   final errorImage = 'res/images/advertencia.png';
-
+  final successImage = 'res/images/success.png';
   final loading = 'res/images/logo_principal.png';
+  final registers = 'res/images/registros.png';
+  final avaluos = 'res/images/avaluo.png';
+  final conciliaciones = 'res/images/conciliacion.png';
 }
 
 class _ResIcons {

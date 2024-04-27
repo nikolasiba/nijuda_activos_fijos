@@ -1,6 +1,6 @@
-import 'package:activosfijos/features/bottom_navigation/presentation/pages/test_page.dart';
-import 'package:activosfijos/features/bottom_navigation/presentation/pages/test_page_1.dart';
+import 'package:activosfijos/features/conciliation/presentation/pages/conciliation_main_pg.dart';
 import 'package:activosfijos/features/home/presentation/pages/home_page.dart';
+import 'package:activosfijos/features/registers/presentation/pages/register_main_pg.dart';
 import 'package:get/get.dart';
 
 class BottomNavigationController extends GetxController {
@@ -12,8 +12,8 @@ class BottomNavigationController extends GetxController {
 
   RxList pages = [
     const HomePage(),
-    const TestPage(),
-    const TestPage1(),
+    const RegisterMainPage(),
+    const ConciliationMainPage()
   ].obs;
 
   static BottomNavigationController get findOrInitial {
