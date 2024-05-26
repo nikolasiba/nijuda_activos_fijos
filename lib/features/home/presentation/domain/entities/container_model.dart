@@ -1,11 +1,8 @@
-import 'package:freezed_annotation/freezed_annotation.dart';
+class ContainerModel {
+  final String title;
+  final String image;
+  final void Function()? onTap;
 
-part 'container_model.freezed.dart';
-
-@freezed
-abstract class ContainerModel with _$ContainerModel {
-  factory ContainerModel(
-      {required String title,
-      required String image,
-      required void Function()? onTap}) = _ContainerModel;
+  ContainerModel(
+      {required this.title, required this.image, required this.onTap});
 }
