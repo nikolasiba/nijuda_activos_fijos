@@ -5,6 +5,7 @@ import 'package:activosfijos/shared/widgets/custom_primary_button.dart';
 import 'package:activosfijos/shared/widgets/custom_textfield.dart';
 import 'package:activosfijos/shared/widgets/separator.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get_state_manager/src/rx_flutter/rx_obx_widget.dart';
 
 class RegisterMainPage extends StatelessWidget {
   RegisterMainPage({super.key});
@@ -85,35 +86,36 @@ class RegisterMainPage extends StatelessWidget {
                       await controller.getFile('camera');
                     },
                     child: Container(
-                      width: 200,
-                      height: controller.file.value.path == '' ? 100 : 150,
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(10),
-                        border: Border.all(color: MyColors.primaryGreen),
-                      ),
-                      child: Center(
-                          child: Column(
-                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                        children: [
-                          controller.file.value.path == ''
-                              ? Icon(
-                                  Icons.add_a_photo_outlined,
-                                  color: MyColors.primaryGreen,
-                                  size: 30,
-                                )
-                              : Image.file(
-                                  controller.file.value,
-                                  fit: BoxFit.scaleDown,
-                                  width: 50,
-                                  height: 50,
-                                ),
-                          Text(
-                            'Agregar imagen(*)',
-                            style: TextStyle(color: MyColors.primaryGreen),
-                          ),
-                        ],
-                      )),
-                    )),
+                        width: 200,
+                        height: controller.file.value.path == '' ? 100 : 150,
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(10),
+                          border: Border.all(color: MyColors.primaryGreen),
+                        ),
+                        child: Obx(
+                          () => Center(
+                              child: Column(
+                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                            children: [
+                              controller.file.value.path == ''
+                                  ? Icon(
+                                      Icons.add_a_photo_outlined,
+                                      color: MyColors.primaryGreen,
+                                      size: 30,
+                                    )
+                                  : Image.file(
+                                      controller.file.value,
+                                      fit: BoxFit.scaleDown,
+                                      width: 50,
+                                      height: 50,
+                                    ),
+                              Text(
+                                'Agregar imagen(*)',
+                                style: TextStyle(color: MyColors.primaryGreen),
+                              ),
+                            ],
+                          )),
+                        ))),
                 const Separator(size: 2),
                 CustomPrimaryButton(
                     text: 'Guardar',

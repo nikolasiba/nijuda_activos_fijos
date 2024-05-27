@@ -1,5 +1,6 @@
 import 'package:activosfijos/features/generate_plaque/presentation/pages/generate_plaque_pg.dart';
 import 'package:activosfijos/features/home/presentation/domain/entities/container_model.dart';
+import 'package:activosfijos/features/informs/presentation/pages/informs_pg.dart';
 import 'package:activosfijos/features/registers/presentation/pages/register_main_pg.dart';
 import 'package:activosfijos/shared/assets/assets.dart';
 import 'package:activosfijos/shared/colors/colors.dart';
@@ -55,7 +56,9 @@ final List<ContainerModel> containerModels = [
   ContainerModel(
     image: Res.images.registers,
     title: 'Informes',
-    onTap: () {},
+    onTap: () {
+      Get.to(() => InformsPage());
+    },
   ),
   ContainerModel(
     image: Res.images.registers,

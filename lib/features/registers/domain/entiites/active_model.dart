@@ -46,7 +46,7 @@ class ActiveModel {
     this.condiciones,
   });
 
-  factory ActiveModel.fromJson(Map<String, dynamic> json) => ActiveModel(
+  factory ActiveModel.fromJson(Map<dynamic, dynamic> json) => ActiveModel(
         id: json["id"],
         nombre: json["nombre"],
         descripcion: json["descripcion"],
