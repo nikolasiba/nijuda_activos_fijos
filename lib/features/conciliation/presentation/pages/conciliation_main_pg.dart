@@ -1,3 +1,4 @@
+import 'package:activosfijos/shared/widgets/cusotm_appbar.dart';
 import 'package:flutter/material.dart';
 
 class ConciliationMainPage extends StatelessWidget {
@@ -5,8 +6,13 @@ class ConciliationMainPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Center(
-      child: Text('Conciliation Main Page'),
+    return const Scaffold(
+      appBar: CustomAppBar(
+        title: 'Conciliacion',
+      ),
+      body: Center(
+        child: Text('Modulo en desarrollo'),
+      ),
     );
   }
 }

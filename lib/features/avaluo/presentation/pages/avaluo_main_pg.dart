@@ -1,3 +1,4 @@
+import 'package:activosfijos/shared/widgets/cusotm_appbar.dart';
 import 'package:flutter/material.dart';
 
 class AvaluoMainPAge extends StatelessWidget {
@@ -5,8 +6,13 @@ class AvaluoMainPAge extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Center(
-      child: Text('Avaluo Main Page'),
+    return const Scaffold(
+      appBar: CustomAppBar(
+        title: 'Avaluo',
+      ),
+      body: Center(
+        child: Text('Modulo en desarrollo'),
+      ),
     );
   }
 }

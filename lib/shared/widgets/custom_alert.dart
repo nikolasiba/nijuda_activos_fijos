@@ -1,9 +1,9 @@
+import 'package:activosfijos/shared/assets/assets.dart';
+import 'package:activosfijos/shared/colors/colors.dart';
 import 'package:activosfijos/shared/widgets/separator.dart';
 import 'package:animate_do/animate_do.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:activosfijos/shared/assets/assets.dart';
-import 'package:activosfijos/shared/colors/colors.dart';
 
 class CustomAlert {
   final String title;
@@ -22,6 +22,7 @@ class CustomAlert {
   final bool? isTelephone;
   final double? iconSize;
   final TextStyle? style;
+  final bool? isNetworkImage;
 
   CustomAlert(
       {required this.title,
@@ -39,7 +40,8 @@ class CustomAlert {
       this.textStyleText1,
       this.textStyleText2,
       this.iconSize,
-      this.style}) {
+      this.style,
+      this.isNetworkImage}) {
     showAlertDialog();
   }
 
@@ -63,6 +65,7 @@ class CustomAlert {
             textStyleText2: textStyleText2,
             iconSize: iconSize,
             style: style,
+            isNetworkImage: isNetworkImage,
           ),
         ),
         barrierDismissible:
@@ -88,6 +91,7 @@ class BodyAlert extends StatelessWidget {
     this.textStyleText2,
     this.iconSize,
     this.style,
+    this.isNetworkImage,
   }) : super(key: key);
 
   final double? height;
@@ -105,6 +109,7 @@ class BodyAlert extends StatelessWidget {
   final bool? isTelephone;
   final double? iconSize;
   final TextStyle? style;
+  final bool? isNetworkImage;
 
   @override
   Widget build(BuildContext context) {
@@ -146,10 +151,12 @@ class BodyAlert extends StatelessWidget {
                         ),
                         const Separator(size: heightSepartor),
                         Expanded(
-                          child: Image.asset(
-                            image ?? Res.images.errorImage,
-                            fit: BoxFit.fitWidth,
-                          ),
+                          child: isNetworkImage ?? false
+                              ? Image.network(image!)
+                              : Image.asset(
+                                  image ?? Res.images.errorImage,
+                                  fit: BoxFit.fitWidth,
+                                ),
                         ),
                         const Separator(size: heightSepartor),
                         if (body != null)

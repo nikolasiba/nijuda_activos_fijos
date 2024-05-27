@@ -5,7 +5,7 @@ import 'package:activosfijos/shared/widgets/custom_primary_button.dart';
 import 'package:activosfijos/shared/widgets/custom_textfield.dart';
 import 'package:activosfijos/shared/widgets/separator.dart';
 import 'package:flutter/material.dart';
-import 'package:get/get_state_manager/src/rx_flutter/rx_obx_widget.dart';
+import 'package:get/get.dart';
 
 class RegisterMainPage extends StatelessWidget {
   RegisterMainPage({super.key});
@@ -122,6 +122,11 @@ class RegisterMainPage extends StatelessWidget {
                     onPressed: () async {
                       String resposne = controller.validateFields();
                       if (resposne == '') {
+                        Get.snackbar('Enviando datos', 'Espere un momento',
+                            showProgressIndicator: true,
+                            snackPosition: SnackPosition.TOP,
+                            backgroundColor: MyColors.primaryGreen,
+                            colorText: MyColors.white);
                         await controller.saveImage();
                       } else {
                         ScaffoldMessenger.of(context).showSnackBar(SnackBar(

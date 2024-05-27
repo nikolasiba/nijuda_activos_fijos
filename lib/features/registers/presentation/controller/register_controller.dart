@@ -81,6 +81,7 @@ class RegisterController extends GetxController {
       file.value,
       uid.value,
     );
+
     if (response.isNotEmpty) {
       urlImageFire = response.obs;
     } else {

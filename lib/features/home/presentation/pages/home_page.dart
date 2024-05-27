@@ -1,9 +1,9 @@
-import 'package:activosfijos/features/generate_plaque/presentation/pages/generate_plaque_pg.dart';
 import 'package:activosfijos/features/home/presentation/domain/entities/container_model.dart';
 import 'package:activosfijos/features/informs/presentation/pages/informs_pg.dart';
 import 'package:activosfijos/features/registers/presentation/pages/register_main_pg.dart';
 import 'package:activosfijos/shared/assets/assets.dart';
 import 'package:activosfijos/shared/colors/colors.dart';
+import 'package:activosfijos/shared/utils/utils.dart';
 import 'package:activosfijos/shared/widgets/cuistom_container_options.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -48,13 +48,6 @@ final List<ContainerModel> containerModels = [
   ),
   ContainerModel(
     image: Res.images.registers,
-    title: 'generar placa',
-    onTap: () {
-      Get.to(() => const GeneratePlaquePage());
-    },
-  ),
-  ContainerModel(
-    image: Res.images.registers,
     title: 'Informes',
     onTap: () {
       Get.to(() => InformsPage());
@@ -62,7 +55,16 @@ final List<ContainerModel> containerModels = [
   ),
   ContainerModel(
     image: Res.images.registers,
+    title: 'generar placa',
+    onTap: () {
+      Utils.showToast();
+    },
+  ),
+  ContainerModel(
+    image: Res.images.registers,
     title: 'Indicadores',
-    onTap: () {},
+    onTap: () {
+      Utils.showToast();
+    },
   ),
 ];

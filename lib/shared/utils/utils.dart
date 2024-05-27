@@ -1,3 +1,6 @@
+import 'package:activosfijos/shared/colors/colors.dart';
+import 'package:get/get.dart';
+
 class Utils {
   static String getInitials(String name) {
     List<String> nameSplit = name.split(" ");
@@ -19,5 +22,15 @@ class Utils {
         now.second.toString() +
         now.millisecond.toString() +
         now.microsecond.toString();
+  }
+
+  static void showToast() {
+    Get.snackbar(
+      "Modulo no disponible",
+      "Este modulo no esta disponible aun, estamos trabajando en ello.",
+      snackPosition: SnackPosition.TOP,
+      backgroundColor: MyColors.primaryGreen,
+      colorText: MyColors.white,
+    );
   }
 }

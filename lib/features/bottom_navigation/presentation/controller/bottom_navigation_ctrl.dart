@@ -1,6 +1,6 @@
+import 'package:activosfijos/features/avaluo/presentation/pages/avaluo_main_pg.dart';
 import 'package:activosfijos/features/conciliation/presentation/pages/conciliation_main_pg.dart';
 import 'package:activosfijos/features/home/presentation/pages/home_page.dart';
-import 'package:activosfijos/features/registers/presentation/pages/register_main_pg.dart';
 import 'package:get/get.dart';
 
 class BottomNavigationController extends GetxController {
@@ -12,7 +12,7 @@ class BottomNavigationController extends GetxController {
 
   RxList pages = [
     const HomePage(),
-    RegisterMainPage(),
+    const AvaluoMainPAge(),
     const ConciliationMainPage(),
   ].obs;
 
