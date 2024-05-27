@@ -1,3 +1,4 @@
+import 'package:activosfijos/features/generate_plaque/presentation/pages/generate_plaque_pg.dart';
 import 'package:activosfijos/features/home/presentation/domain/entities/container_model.dart';
 import 'package:activosfijos/features/registers/presentation/pages/register_main_pg.dart';
 import 'package:activosfijos/shared/assets/assets.dart';
@@ -41,13 +42,15 @@ final List<ContainerModel> containerModels = [
     image: Res.images.registers,
     title: 'Registrar',
     onTap: () {
-      Get.to(() => const RegisterMainPage());
+      Get.to(() => RegisterMainPage());
     },
   ),
   ContainerModel(
     image: Res.images.registers,
     title: 'generar placa',
-    onTap: () {},
+    onTap: () {
+      Get.to(() => const GeneratePlaquePage());
+    },
   ),
   ContainerModel(
     image: Res.images.registers,

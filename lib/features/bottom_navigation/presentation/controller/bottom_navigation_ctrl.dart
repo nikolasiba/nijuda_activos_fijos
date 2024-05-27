@@ -12,8 +12,8 @@ class BottomNavigationController extends GetxController {
 
   RxList pages = [
     const HomePage(),
-    const RegisterMainPage(),
-    const ConciliationMainPage()
+    RegisterMainPage(),
+    const ConciliationMainPage(),
   ].obs;
 
   static BottomNavigationController get findOrInitial {
