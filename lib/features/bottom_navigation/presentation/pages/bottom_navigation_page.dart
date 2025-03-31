@@ -6,7 +6,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 class BottomNavigationPage extends StatelessWidget {
-  BottomNavigationPage({Key? key}) : super(key: key);
+  BottomNavigationPage({super.key});
   final navigationCtrl = BottomNavigationController.findOrInitial;
 
   @override

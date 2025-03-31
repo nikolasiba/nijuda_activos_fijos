@@ -1,21 +1,20 @@
-import 'package:flutter/material.dart';
 import 'package:activosfijos/shared/colors/colors.dart';
-
 import 'package:activosfijos/shared/utils/responsive.dart';
+import 'package:flutter/material.dart';
 
 /// The CustomPrimaryButton class is a stateless widget that displays a
 /// The CustomPrimaryButton class is a stateless widget that displays a
 /// filled button with a text and an onPressed callback.
 class CustomPrimaryButton extends StatelessWidget {
   const CustomPrimaryButton({
-    Key? key,
+    super.key,
     required this.text,
     required this.onPressed,
     this.height,
     this.width,
     this.textStyle,
     this.color,
-  }) : super(key: key);
+  });
 
   final String text;
   final VoidCallback onPressed;

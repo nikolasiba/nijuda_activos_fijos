@@ -75,7 +75,7 @@ class CustomAlert {
 
 class BodyAlert extends StatelessWidget {
   const BodyAlert({
-    Key? key,
+    super.key,
     this.height,
     this.width,
     required this.onPressed,
@@ -92,7 +92,7 @@ class BodyAlert extends StatelessWidget {
     this.iconSize,
     this.style,
     this.isNetworkImage,
-  }) : super(key: key);
+  });
 
   final double? height;
   final double? width;

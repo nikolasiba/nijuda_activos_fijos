@@ -2,8 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 class Separator extends StatelessWidget {
-  const Separator({Key? key, this.vertical = true, required this.size})
-      : super(key: key);
+  const Separator({super.key, this.vertical = true, required this.size});
 
   final bool vertical;
   final double size;
